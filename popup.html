@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLP Browser Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            padding: 10px;
+            background-color: #f4f4f9;
+            width: 250px;
+        }
+        h1 {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type="text"], input[type="url"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        button {
+            padding: 7px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .list-container {
+            margin-bottom: 15px;
+        }
+        .list-container ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .list-container li {
+            background-color: #f0f0f0;
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .list-container li button {
+            background-color: #f44336;
+            font-size: 12px;
+        }
+        .toggle {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .toggle label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DLP Settings</h1>
+
+    <label for="extension-input">Add Blocked Extension:</label>
+    <input type="text" id="extension-input" placeholder=".pdf, .docx, etc.">
+    <button id="add-extension">Add Blocked Extension</button>
+    <div class="list-container">
+        <ul id="extension-list"></ul>
+    </div>
+
+    <label for="website-input">Add Allowed Website:</label>
+    <input type="url" id="website-input" placeholder="https://example.com">
+    <button id="add-website">Add Allowed Website</button>
+    <div class="list-container">
+        <ul id="website-list"></ul>
+    </div>
+
+    <div class="toggle">
+        <label for="extension-toggle">Enable Blocking:</label>
+        <input type="checkbox" id="extension-toggle">
+    </div>
+
+    <script src="popup.js"></script
